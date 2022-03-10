@@ -8,17 +8,15 @@
     day: "numeric",
   };
 
-  let stringFechaMatriculacion = "";
+  let stringFechaMatriculacion = "void";
 
-  onMount(() => {
-    if (vehiculo.fechaMatriculacion !== undefined) {
-      const fechaMatriculacion = new Date(vehiculo.fechaMatriculacion);
-      stringFechaMatriculacion = fechaMatriculacion.toLocaleDateString(
-        "en-US",
-        options
-      );
-    }
-  });
+  if (vehiculo.fechaMatriculacion !== undefined) {
+    const fechaMatriculacion = new Date(vehiculo.fechaMatriculacion);
+    stringFechaMatriculacion = fechaMatriculacion.toLocaleDateString(
+      "en-US",
+      options
+    );
+  }
 </script>
 
 <div class="card border-secondary shadow">
