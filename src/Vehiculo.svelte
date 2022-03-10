@@ -1,6 +1,24 @@
 <script>
-  export let vehiculo = {};
   import { onMount } from "svelte";
+  export let vehiculo = {};
+
+  const options = {
+    year: "numeric",
+    month: "short",
+    day: "numeric",
+  };
+
+  let stringFechaMatriculacion = "";
+
+  onMount(() => {
+    if (vehiculo.fechaMatriculacion !== undefined) {
+      const fechaMatriculacion = new Date(vehiculo.fechaMatriculacion);
+      stringFechaMatriculacion = fechaMatriculacion.toLocaleDateString(
+        "en-US",
+        options
+      );
+    }
+  });
 </script>
 
 <div class="card border-secondary shadow">
@@ -42,14 +60,14 @@
       <span class="input-group-text" id="registration">Registration</span>
       <span class="input-group-text" id="textRegistration">
         {vehiculo.fechaMatriculacion !== undefined
-          ? vehiculo.fechaMatriculacion.slice(0, 10)
+          ? stringFechaMatriculacion
           : "Insert below"}
       </span>
     </div>
 
     <div class="input-group mb-3">
       <input
-        type="text"
+        type="date"
         class="form-control"
         aria-label="Registration"
         aria-describedby="registration"
