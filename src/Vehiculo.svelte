@@ -1,22 +1,15 @@
 <script>
-  import { onMount } from "svelte";
   export let vehiculo = {};
+  import dayjs from "dayjs";
+  
+  export let format = "YYYY-MM-DD";
+  export let date = vehiculo.fechaMatriculacion;
 
-  const options = {
-    year: "numeric",
-    month: "short",
-    day: "numeric",
-  };
+  const input = (x) => (vehiculo.fechaMatriculacion = dayjs(x).format(format));
+  const output = (x) => (date = dayjs(x, format).toDate());
 
-  let stringFechaMatriculacion = "void";
-
-  if (vehiculo.fechaMatriculacion !== undefined) {
-    const fechaMatriculacion = new Date(vehiculo.fechaMatriculacion);
-    stringFechaMatriculacion = fechaMatriculacion.toLocaleDateString(
-      "en-US",
-      options
-    );
-  }
+  $: input(vehiculo.fechaMatriculacion);
+  $: output(vehiculo.fechaMatriculacion);
 </script>
 
 <div class="card border-secondary shadow">
@@ -52,15 +45,6 @@
         aria-describedby="model"
         bind:value={vehiculo.modelo}
       />
-    </div>
-
-    <div class="input-group mb-3">
-      <span class="input-group-text" id="registration">Registration</span>
-      <span class="input-group-text" id="textRegistration">
-        {vehiculo.fechaMatriculacion !== undefined
-          ? stringFechaMatriculacion
-          : "Insert below"}
-      </span>
     </div>
 
     <div class="input-group mb-3">

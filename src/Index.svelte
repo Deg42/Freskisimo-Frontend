@@ -11,8 +11,8 @@
 <p>
   <small>
     Backend in
-    <a href="https://freskisimo-app.herokuapp.com/">
-      https://freskisimo-app.herokuapp.com/
+    <a href="https://freskisimo-api-rest.onrender.com/">
+      https://freskisimo-api-rest.onrender.com/
     </a>
   </small>
 </p>

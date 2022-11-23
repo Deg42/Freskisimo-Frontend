@@ -63,7 +63,7 @@
     <div class="input-group mb-3">
       <span class="input-group-text" id="vehiculo">Vehículo ID</span>
       <span class="input-group-text" id="textRegistration">
-        {repartidor.vehiculoId !== undefined
+        {repartidor.vehiculoId != undefined || repartidor.vehiculoId != null
           ? repartidor.vehiculoId.matricula
           : "Select below"}
       </span>

@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container">
-      <a class="navbar-brand" href="index.html">
+      <a class="navbar-brand" href="/">
         <img src="img/logo.png" width="25" height="25" class="ms-3 d-inline-block align-top" alt="" />
         Freskisimo API REST
       </a>
@@ -13,7 +13,7 @@
       <div class="collapse navbar-collapse" id="mainNav">
         <ul class="navbar-nav">
           <li class="nav-item active">
-            <a class="nav-link" href="index.html">Home</a>
+            <a class="nav-link" href="/">Home</a>
           </li>
 
           <li class="nav-item">
@@ -21,7 +21,7 @@
           </li>
 
           <li class="nav-item">
-            <a class="nav-link" href="https://freskisimo-app.herokuapp.com/">API</a>
+            <a class="nav-link" href="https://freskisimo-api-rest.onrender.com/">API</a>
           </li>
         </ul>
       </div>

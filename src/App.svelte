@@ -6,9 +6,9 @@
   import { setContext } from "svelte";
 
   const URL = {
-    congelados: "https://freskisimo-app.herokuapp.com/api/congelados/",
-    vehiculos: "https://freskisimo-app.herokuapp.com/api/vehiculos/",
-    repartidores: "https://freskisimo-app.herokuapp.com/api/repartidores/",
+    congelados: "https://freskisimo-api-rest.onrender.com/api/congelados/",
+    vehiculos: "https://freskisimo-api-rest.onrender.com/api/vehiculos/",
+    repartidores: "https://freskisimo-api-rest.onrender.com/api/repartidores/",
   };
 
   setContext("URL", URL);
